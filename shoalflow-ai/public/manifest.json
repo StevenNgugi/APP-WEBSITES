@@ -1,0 +1,11 @@
+{
+  "name": "ShoalFlow AI",
+  "short_name": "ShoalFlow",
+  "description": "Smarter business operations",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f9f6",
+  "theme_color": "#101a4c",
+  "icons": []
+}

@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Website and sign-in",
+    "sanity": true,
+    "viewport": "desktop",
+    "covers": [
+      "public marketing website",
+      "features and pricing",
+      "auth sign-in",
+      "protected workspace"
+    ],
+    "description": "Visitor can explore public website and sign into a private workspace.",
+    "steps": [
+      "Open the marketing homepage and review feature sections",
+      "Click Get started and complete the authentication popup",
+      "Confirm the private workspace overview becomes visible"
+    ],
+    "expected": "Public marketing content is accessible; after sign-in the workspace overview and navigation are visible."
+  },
+  {
+    "name": "Create customer and quotation records",
+    "viewport": "desktop",
+    "covers": [
+      "customer CRUD",
+      "quotation CRUD",
+      "database persistence",
+      "search",
+      "dashboard metrics"
+    ],
+    "description": "Records can be created, edited, searched and retained after refresh.",
+    "steps": [
+      "Sign in and open Customers",
+      "Add a customer named Alpha Printworks",
+      "Edit that customer and save an updated note",
+      "Open Quotations and add Alpha Printworks quote with amount 2500",
+      "Refresh and search for Alpha Printworks"
+    ],
+    "expected": "Customer and quotation remain saved and searchable, and dashboard totals reflect them."
+  },
+  {
+    "name": "Invoice and follow-up management",
+    "viewport": "mobile",
+    "covers": [
+      "invoice management",
+      "follow-up management",
+      "responsive layout",
+      "analytics"
+    ],
+    "description": "Mobile users can manage operations and see totals.",
+    "steps": [
+      "Sign in on a mobile viewport",
+      "Open Invoices and add a paid invoice amount 2000",
+      "Open Follow-ups and add a pending customer follow-up",
+      "Open Analytics"
+    ],
+    "expected": "Saved records remain visible and analytics shows KSh 2,000 paid."
+  },
+  {
+    "name": "Invalid and destructive actions",
+    "viewport": "desktop",
+    "covers": [
+      "required name validation",
+      "record deletion confirmation",
+      "protected data guardrail"
+    ],
+    "description": "Invalid entries are rejected and deletions require approval.",
+    "steps": [
+      "Sign in, open Customers and click Add customer",
+      "Leave name empty and click Save record",
+      "Confirm the validation message appears",
+      "Create a record named Delete Example, click its delete icon and confirm"
+    ],
+    "expected": "Empty name is not saved and a confirmed deletion removes Delete Example."
+  },
+  {
+    "name": "AI drafting assistant",
+    "viewport": "desktop",
+    "covers": ["AI generation", "editable output", "AI failure handling"],
+    "description": "AI can draft useful language for review and show a failure message when unavailable.",
+    "steps": [
+      "Sign in and navigate to Quotations",
+      "Open AI draft and ask for a professional quotation introduction",
+      "Generate the draft and inspect the editable suggestion"
+    ],
+    "expected": "The generated wording is visible in an editable field with a reminder to verify information."
+  }
+]
